@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">foodmunch</string>
+    <string name="todo"/>
+    <string name="food_munch"/>
+    <string name="forgot_password"/>
+    <string name="not_registered_signup_here"/>
+    <string name="login"/>
+    <string name="password"/>
+    <string name="email"/>
+</resources>
