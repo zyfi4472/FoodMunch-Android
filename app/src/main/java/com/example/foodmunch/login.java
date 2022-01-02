@@ -11,13 +11,15 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
     }
-
 
     public void signup(View view) {
         Intent i = new Intent(login.this , register.class);
         startActivity(i);
+    }
+
+    public void home(View view) {
+        Intent i2 = new Intent(login.this , home.class);
+        startActivity(i2);
     }
 }
