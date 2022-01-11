@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.foodmunch">
+    package="com.example.foodmunch">
 
     <application
-            android:allowBackup="true"
-            android:fullBackupContent="@xml/backup_descriptor"
-            android:icon="@mipmap/ic_launcher"
-            android:label="Food Munch"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.Foodmunch">
-        <activity android:name=".home"
-            android:theme="@style/Theme.Foodmunch.NoActionBar">
-        </activity>
-        <activity android:name=".register">
-        </activity>
-        <activity android:name=".login">
-        </activity>
-        <activity android:name=".MainActivity"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Food Munch"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Foodmunch">
+        <activity
+            android:name=".specialcustomList"
+            android:exported="false" />
+        <activity
+            android:name=".specialMenu"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:theme="@style/Theme.Foodmunch.NoActionBar" />
+        <activity android:name=".register" />
+        <activity android:name=".login" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

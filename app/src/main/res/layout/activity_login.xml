@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -92,7 +92,7 @@
             tools:ignore="HardcodedText,TextContrastCheck,UnusedAttribute"/>
 
     <Button
-            android:id="@+id/button"
+            android:id="@+id/login"
             android:layout_width="339dp"
             android:layout_height="52dp"
             android:layout_marginStart="32dp"
@@ -121,7 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintVertical_bias="0.101"
         tools:ignore="HardcodedText" />
 
@@ -136,13 +136,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintVertical_bias="0.396" />
 
     <TextView
             android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password"
+            android:text="Forgot Password?"
             android:textColor="#FF0000"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -150,19 +150,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signup"/>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="177dp"
-        android:layout_height="59dp"
-        android:text="Home Screen"
+            app:layout_constraintTop_toBottomOf="@+id/signup"
+            />
+    <!--<Button
+        android:id="@+id/button1"
+        android:layout_width="339dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="specialmenu"
+        android:text="Today's Special"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        android:onClick="home"
-        tools:ignore="HardcodedText" />
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
+-->
 
-
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
