@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodmunch">
         <activity
+            android:name=".verifyPhone"
+            android:exported="false" />
+        <activity
+            android:name=".editProfile"
+            android:exported="false" />
+        <activity
+            android:name=".userProfile"
+            android:exported="false" />
+        <activity
             android:name=".specialcustomList"
             android:exported="false" />
         <activity

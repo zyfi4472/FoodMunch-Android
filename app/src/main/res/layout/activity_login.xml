@@ -152,18 +152,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signup"
             />
-    <!--<Button
+
+    <Button
         android:id="@+id/button1"
         android:layout_width="339dp"
         android:layout_height="52dp"
+        android:layout_marginStart="36dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
         android:layout_marginBottom="32dp"
-        android:onClick="specialmenu"
-        android:text="Today's Special"
+        android:onClick="home"
+        android:text="Home Screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
--->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

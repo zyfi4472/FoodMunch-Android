@@ -14,11 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 
 public class login extends AppCompatActivity{
 
-    DatabaseReference dbReference;
     EditText editTextemail, editTextpassword;
     Button btnlogin;
     FirebaseAuth mAuth;
@@ -68,5 +66,9 @@ public class login extends AppCompatActivity{
         startActivity(i);
     }
 
+    public void home(View view) {
+        Intent i = new Intent(login.this,  editProfile.class);
+        startActivity(i);
+    }
 }
 
