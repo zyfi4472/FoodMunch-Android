@@ -11,6 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodmunch">
         <activity
+            android:name=".recieveorder"
+            android:exported="true" />
+        <activity
+            android:name=".ordermanagement"
+            android:exported="true" />
+        <activity
+            android:name=".manageorder"
+            android:exported="true" />
+        <activity
+            android:name=".Feedback"
+            android:exported="true" />
+        <activity
+            android:name=".addmenu"
+            android:exported="true" />
+        <activity
+            android:name=".dashboard"
+            android:exported="true" />
+        <activity
             android:name=".verifyPhone"
             android:exported="false" />
         <activity
@@ -28,15 +46,21 @@
         <activity
             android:name=".home"
             android:theme="@style/Theme.Foodmunch.NoActionBar" />
-        <activity android:name=".register" />
-        <activity android:name=".login" />
+        <activity
+            android:name=".register"
+            android:noHistory="true"/>
+        <activity
+            android:name=".login"
+            android:noHistory="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action
+                    android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

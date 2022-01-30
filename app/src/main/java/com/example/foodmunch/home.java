@@ -3,6 +3,7 @@ package com.example.foodmunch;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,10 +13,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +45,14 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
         }
 
+
     }
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser mUser = mAuth.getCurrentUser();
         switch(menuItem.getItemId())
         {
             case R.id.nav_home:
@@ -59,6 +66,11 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
             case R.id.nav_myorders:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyordersFragment()).commit();
+                break;
+            case R.id.nav_logout:
+                mAuth.signOut();
+                startActivity(new Intent(getApplicationContext(),login.class));
+                Toast.makeText(getApplicationContext(), "Logout Successful", Toast.LENGTH_LONG).show();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

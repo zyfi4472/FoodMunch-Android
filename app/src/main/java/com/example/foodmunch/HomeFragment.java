@@ -1,5 +1,4 @@
 package com.example.foodmunch;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -53,5 +52,4 @@ public class HomeFragment extends Fragment {
 
         return v;
     }
-
 }

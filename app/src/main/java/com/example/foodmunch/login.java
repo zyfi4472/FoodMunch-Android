@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
 public class login extends AppCompatActivity{
 
     EditText editTextemail, editTextpassword;
@@ -46,11 +48,11 @@ public class login extends AppCompatActivity{
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                startActivity(new Intent(getApplicationContext(),home.class));
                                 Toast.makeText(login.this, "Login successful!", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(login.this,home.class));
                             }
                             else{
-                                Toast.makeText(login.this, "Login failed" + task.getException().getMessage() , Toast.LENGTH_LONG).show();
+                                Toast.makeText(login.this, "Login failed" + Objects.requireNonNull(task.getException()).getMessage() , Toast.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -61,13 +63,14 @@ public class login extends AppCompatActivity{
     }
 
 
+
     public void signup(View view) {
         Intent i = new Intent(login.this, register.class);
         startActivity(i);
     }
 
-    public void home(View view) {
-        Intent i = new Intent(login.this,  editProfile.class);
+    public void cafe(View view) {
+        Intent i = new Intent(login.this,  dashboard.class);
         startActivity(i);
     }
 }

@@ -151,7 +151,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signup"
-            />
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/button1"
@@ -160,8 +160,8 @@
         android:layout_marginStart="36dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="32dp"
-        android:onClick="home"
-        android:text="Home Screen"
+        android:onClick="cafe"
+        android:text="cafe owner Screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
