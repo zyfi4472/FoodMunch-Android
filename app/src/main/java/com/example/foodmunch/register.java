@@ -71,6 +71,12 @@ public class register extends AppCompatActivity implements View.OnClickListener{
             editTextfullname.requestFocus();
             return;
         }
+        if(fullName.length()>30)
+        {
+            editTextfullname.setError("Full name length must be less than 30 characters");
+            editTextfullname.requestFocus();
+            return;
+        }
         if(email.isEmpty())
         {
             editTextemail.setError("Email is required");

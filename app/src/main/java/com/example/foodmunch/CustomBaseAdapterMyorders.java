@@ -8,14 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomBaseAdapter extends BaseAdapter {
+public class CustomBaseAdapterMyorders extends BaseAdapter {
 
     Context context;
     String listmenu[];
     int listimages[];
     LayoutInflater inflater;
 
-    public CustomBaseAdapter(Context ctx, String [] menulist, int [] images){
+    public CustomBaseAdapterMyorders(Context ctx, String [] menulist, int [] images){
         this.context = ctx;
         this.listmenu = menulist;
         this.listimages = images;
@@ -42,7 +42,7 @@ public class CustomBaseAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.activity_specialcustom_list, null);
+        convertView = inflater.inflate(R.layout.activity_myorders_list, null);
         TextView foodtext = (TextView) convertView.findViewById(R.id.t1);
         ImageView foodimage = (ImageView) convertView.findViewById(R.id.imageIcon);
         foodtext.setText(listmenu[position]);

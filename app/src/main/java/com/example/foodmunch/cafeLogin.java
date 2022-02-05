@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
-public class login extends AppCompatActivity{
+public class cafeLogin extends AppCompatActivity{
 
     EditText editTextemail, editTextpassword;
     Button btnlogin;
@@ -26,7 +26,7 @@ public class login extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_cafe_login);
 
         btnlogin = findViewById(R.id.login);
         editTextemail = findViewById(R.id.email);
@@ -41,18 +41,18 @@ public class login extends AppCompatActivity{
                 String inputPassword = editTextpassword.getText().toString();
 
                 if(inputEmail.equals("") | inputPassword.equals("")){
-                    Toast.makeText(login.this, "Please fill all the fields!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(cafeLogin.this, "Please fill all the fields!", Toast.LENGTH_LONG).show();
                 }
                 else {
                     mAuth.signInWithEmailAndPassword(inputEmail, inputPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                startActivity(new Intent(getApplicationContext(),home.class));
-                                Toast.makeText(login.this, "Login successful!", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(getApplicationContext(),dashboard.class));
+                                Toast.makeText(cafeLogin.this, "Login successful!", Toast.LENGTH_LONG).show();
                             }
                             else{
-                                Toast.makeText(login.this, "Login failed" + Objects.requireNonNull(task.getException()).getMessage() , Toast.LENGTH_LONG).show();
+                                Toast.makeText(cafeLogin.this, "Login failed" + Objects.requireNonNull(task.getException()).getMessage() , Toast.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -65,12 +65,13 @@ public class login extends AppCompatActivity{
 
 
     public void signup(View view) {
-        Intent i = new Intent(login.this, register.class);
+        Intent i = new Intent(cafeLogin.this, cafeRegister.class);
         startActivity(i);
     }
 
-    public void ownerLogin(View view) {
-        Intent i = new Intent(login.this,  cafeLogin.class);
+
+    public void customerLogin(View view) {
+        Intent i = new Intent(cafeLogin.this, login.class);
         startActivity(i);
     }
 }
