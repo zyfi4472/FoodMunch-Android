@@ -21,8 +21,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -31,6 +34,7 @@ public class verifyPhone extends AppCompatActivity
 
     String phonenumber, otpid, fullName, email, password;
     FirebaseAuth mAuth;
+    FirebaseFirestore fstore;
     Button b2;
     EditText t2;
 
@@ -48,6 +52,7 @@ public class verifyPhone extends AppCompatActivity
         b2 = findViewById(R.id.b2);
         t2 = findViewById(R.id.t2);
         mAuth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
 
         initiateotp();
 
@@ -126,7 +131,39 @@ public class verifyPhone extends AppCompatActivity
 
     private void createuser() {
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                .addOnSuccessListener(new OnSuccessListener<AuthResult>()
+        {
+            @Override
+            public void onSuccess(AuthResult authResult)
+            {
+
+                FirebaseUser user = mAuth.getCurrentUser();
+                Toast.makeText(verifyPhone.this,"Registration successull!",Toast.LENGTH_LONG).show();
+                DocumentReference df = fstore.collection("Users").document(user.getUid());
+                Map<String,Object> userInfo = new HashMap<>();
+                userInfo.put("Full Name",fullName);
+                userInfo.put("Email",email);
+                userInfo.put("Phone",phonenumber);
+                userInfo.put("Password",password);
+
+                //specify user role
+
+                userInfo.put("isCustomer","1");
+
+                df.set(userInfo);
+                startActivity(new Intent(getApplicationContext(),login.class));
+                finish();
+            }
+        }).addOnFailureListener(new OnFailureListener()
+        {
+            @Override
+            public void onFailure(@NonNull Exception e)
+            {
+                Toast.makeText(verifyPhone.this,"Registration Failed!",Toast.LENGTH_LONG).show();
+
+            }
+        });
+                /*.addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
@@ -140,8 +177,11 @@ public class verifyPhone extends AppCompatActivity
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
 
+
                                     if(task.isSuccessful()){
                                         FirebaseUser user = mAuth.getCurrentUser();
+                                        Map<String,Object> userInfo = new HashMap<>();
+                                        userInfo.put("isCustomer","1");
                                         user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
@@ -169,7 +209,7 @@ public class verifyPhone extends AppCompatActivity
                             Toast.makeText(verifyPhone.this, "Registration unsuccessful!! Try again!"+task.getException(), Toast.LENGTH_LONG).show();
                         }
                     }
-                });
+                });*/
     }
 
 

@@ -13,60 +13,91 @@
         android:id="@+id/button6"
         android:layout_width="196dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="212dp"
+        android:onClick="feedback1"
         android:text="Feedback1"
+        android:textColor="#070707"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:ignore="HardcodedText" android:textColor="#070707" android:layout_marginBottom="216dp"
-        app:layout_constraintHorizontal_bias="0.451" android:textSize="24sp"
-        android:onClick="feedback1"/>
+        tools:ignore="HardcodedText" />
+
     <Button
         android:id="@+id/button5"
         android:layout_width="196dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="44dp"
+        android:onClick="menu"
         android:text="Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:ignore="HardcodedText" android:textColor="#070707" android:layout_marginBottom="512dp"
-        app:layout_constraintHorizontal_bias="0.451" android:textSize="24sp"
-        android:onClick="menu"/>
-    <Button
-        android:id="@+id/button4"
-        android:layout_height="59dp"
-        android:text="Orders"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:ignore="HardcodedText" android:textColor="#070707" android:layout_marginBottom="412dp"
-        app:layout_constraintHorizontal_bias="0.451" android:textSize="24sp"
-        android:onClick="orders" android:layout_width="190dp"/>
+        tools:ignore="HardcodedText" />
 
     <Button
-            android:id="@+id/button3"
-            android:layout_width="196dp"
-            android:layout_height="57dp"
-            android:text="Customer"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="HardcodedText" android:textColor="#070707" android:layout_marginBottom="312dp"
-            app:layout_constraintHorizontal_bias="0.451" android:textSize="24sp"/>
+        android:id="@+id/button4"
+        android:layout_width="190dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="orders"
+        android:text="Orders"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="196dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="36dp"
+        android:text="Customer"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+
     <TextView
-            android:id="@+id/textView3"
-            android:layout_width="247dp"
-            android:layout_height="49dp"
-            android:fontFamily="sans-serif"
-            android:text="Food Munch"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.057" android:gravity="center_horizontal"
-            tools:ignore="HardcodedText" android:textColor="#020202" app:layout_constraintHorizontal_bias="0.432"/>
+        android:id="@+id/textView3"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="Food Munch"
+        android:textAlignment="center"
+        android:textColor="#020202"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="313dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="logout"
+        android:text="logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodmunch">
         <activity
+            android:name=".cafeList"
+            android:exported="false" />
+        <activity
             android:name=".ownerVerifyPhone"
             android:exported="false" />
         <activity
