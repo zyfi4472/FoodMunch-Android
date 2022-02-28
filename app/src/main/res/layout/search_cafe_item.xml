@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="15dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_baseline_search_24" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/productName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="asbdjhb dsan asbdjhb"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

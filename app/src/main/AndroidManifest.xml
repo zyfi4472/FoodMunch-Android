@@ -1,71 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foodmunch">
+    package="com.naqvi.foodmunch">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:fullBackupContent="@xml/backup_descriptor"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Food Munch"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Foodmunch">
+        android:theme="@style/Theme.FoodMunch">
         <activity
-            android:name=".cafeList"
+            android:name=".Customer.CafeProfile.CafeProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ownerVerifyPhone"
+            android:name=".Cafe.ProductsList.ProductsListActivity"
             android:exported="false" />
         <activity
-            android:name=".cafeRegister"
+            android:name=".Cafe.CafeCategories.CafeCategoriesActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".Cafe.CafeOwnerProfile.CafeOwnerProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".cafeLogin"
+            android:name=".Cafe.CreateCafe.CreateCafeActivity"
             android:exported="false" />
         <activity
-            android:name=".recieveorder"
-            android:exported="true" />
-        <activity
-            android:name=".ordermanagement"
-            android:exported="true" />
-        <activity
-            android:name=".manageorder"
-            android:exported="true" />
-        <activity
-            android:name=".Feedback"
-            android:exported="true" />
-        <activity
-            android:name=".addmenu"
-            android:exported="true" />
-        <activity
-            android:name=".dashboard"
-            android:exported="true" />
-        <activity
-            android:name=".verifyPhone"
+            android:name=".Cafe.AddProduct.AddProductActivity"
             android:exported="false" />
         <activity
-            android:name=".editProfile"
+            android:name=".Customer.SearchCafe.SearchCafeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Cafe.CafeProfile.CafeProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".userProfile"
+            android:name=".Cafe.CafesList.CafeListActivity"
             android:exported="false" />
         <activity
-            android:name=".specialcustomList"
+            android:name=".Common.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".specialMenu"
+            android:name=".Common.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".home"
-            android:theme="@style/Theme.Foodmunch.NoActionBar" />
-        <activity
-            android:name=".register"
-            android:noHistory="true" />
-        <activity
-            android:name=".login"
-            android:noHistory="true" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Common.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,6 +63,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Cafe.CafeDashboard.CafeDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Customer.MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.FoodMunch.NoActionBar" />
     </application>
 
 </manifest>

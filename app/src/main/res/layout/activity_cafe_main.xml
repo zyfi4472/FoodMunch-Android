@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profileButton"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:letterSpacing="0"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="12dp"
+        android:text="My Profile"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/myCafesButton"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:letterSpacing="0"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="12dp"
+        android:text="My Cafes"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:letterSpacing="0"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="12dp"
+        android:text="Logout"
+        android:textSize="16sp" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

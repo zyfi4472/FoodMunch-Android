@@ -3,79 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#DAD3D3">
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/fullNameTitle"
-        android:layout_width="76dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="65dp"
-        android:gravity="center"
-        android:text="Name :"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/phoneTitle"
-        android:layout_width="76dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="466dp"
-        android:gravity="center"
-        android:text="Phone :"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/emailTitle"
-        android:layout_width="76dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="Email :"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phoneTitle"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/currentName"
-        android:layout_width="262dp"
-        android:layout_height="30dp"
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="14dp"
-        android:gravity="center"
-        android:text="TextView"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
 
-    <TextView
-        android:id="@+id/currentEmail"
-        android:layout_width="260dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="51dp"
-        android:gravity="center"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/currentPhone"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
-    <TextView
-        android:id="@+id/currentPhone"
-        android:layout_width="209dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="464dp"
-        android:gravity="center"
-        android:text="TextVie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
